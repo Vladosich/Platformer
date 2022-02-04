@@ -6,6 +6,8 @@ public class PlayerController : MonoBehaviour
     private readonly float speed = 5f;
     private readonly float jumpForce = 5f;
 
+    private bool isGrounded;
+
 
     private Rigidbody2D playerRigidbody;
 
@@ -16,7 +18,7 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Jump") && isGrounded)
         {
             Jump();
         }
@@ -35,5 +37,13 @@ public class PlayerController : MonoBehaviour
     private void Jump()
     {
         playerRigidbody.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
+        isGrounded = false;
     }
+
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        isGrounded = collision.gameObject.CompareTag("Ground");
+    }
+
 }

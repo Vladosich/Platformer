@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1454763116}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -95,7 +95,7 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.03, y: 0.408}
+  m_Offset: {x: -0.03, y: 0.42}
   serializedVersion: 2
   m_Radius: 0.41
 --- !u!114 &1454763116
@@ -121,7 +121,7 @@ GameObject:
   - component: {fileID: 3803134146888143747}
   - component: {fileID: 2794151239586527467}
   m_Layer: 0
-  m_Name: Sprite
+  m_Name: Player sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
