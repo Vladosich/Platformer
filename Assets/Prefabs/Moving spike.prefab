@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4989932943871096000}
   - component: {fileID: -1165575440030450361}
   m_Layer: 0
-  m_Name: Falling spike
+  m_Name: Moving spike
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

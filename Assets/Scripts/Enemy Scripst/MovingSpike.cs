@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class FallingEnemy : Enemy
+public class MovingSpike : Enemy
 {
     [SerializeField] private Vector2 direction;
 
@@ -10,7 +10,7 @@ public class FallingEnemy : Enemy
     {
         if (isPlayerUnderObject)
         {
-            Fall();
+            Move();
         }
     }
 
@@ -24,7 +24,7 @@ public class FallingEnemy : Enemy
         isPlayerUnderObject = collision.gameObject.CompareTag("Player");
     }
 
-    private void Fall()
+    private void Move()
     {
         transform.Translate(direction);
     }

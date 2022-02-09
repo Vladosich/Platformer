@@ -8,8 +8,9 @@ public class PlayerController : MonoBehaviour
 
     private bool isGrounded;
 
-
     private Rigidbody2D playerRigidbody;
+
+    public bool IsGrounded { get { return isGrounded; } }
 
     private void Start()
     {
@@ -28,6 +29,7 @@ public class PlayerController : MonoBehaviour
     {
         Run();
     }
+
     private void Run()
     {
         horizontalInput = Input.GetAxis("Horizontal");
@@ -40,7 +42,7 @@ public class PlayerController : MonoBehaviour
         isGrounded = false;
     }
 
-
+    
     private void OnCollisionEnter2D(Collision2D collision)
     {
         isGrounded = collision.gameObject.CompareTag("Ground");
