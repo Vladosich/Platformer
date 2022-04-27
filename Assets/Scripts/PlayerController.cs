@@ -9,12 +9,14 @@ public class PlayerController : MonoBehaviour
     private bool isGrounded;
 
     private Rigidbody2D playerRigidbody;
+    private SpriteRenderer playerSprite;
 
     public bool IsGrounded { get { return isGrounded; } }
 
     private void Start()
     {
         playerRigidbody = GetComponent<Rigidbody2D>();
+        playerSprite = GetComponentInChildren<SpriteRenderer>();
     }
 
     private void Update()
@@ -23,6 +25,7 @@ public class PlayerController : MonoBehaviour
         {
             Jump();
         }
+        Flip();
     }
 
     private void FixedUpdate()
@@ -40,6 +43,11 @@ public class PlayerController : MonoBehaviour
     {
         playerRigidbody.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         isGrounded = false;
+    }
+
+    private void Flip()
+    {
+        playerSprite.flipX = horizontalInput < 0.0f;
     }
 
     

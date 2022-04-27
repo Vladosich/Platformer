@@ -3,7 +3,7 @@ using UnityEngine;
 public class PlayerAnimator : MonoBehaviour
 {
     private Animator animator;
-    private SpriteRenderer playerSprite;
+    
     private PlayerController playerControllerScript;
 
     private States State
@@ -15,7 +15,7 @@ public class PlayerAnimator : MonoBehaviour
     private void Start()
     {
         animator = GetComponent<Animator>();
-        playerSprite = GetComponentInChildren<SpriteRenderer>();
+        
         playerControllerScript = GetComponent<PlayerController>();
     }
 
