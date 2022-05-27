@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
     private readonly float jumpForce = 5f;
 
     private bool isGrounded;
+    private bool facingRight = true;
 
     private Rigidbody2D playerRigidbody;
     private SpriteRenderer playerSprite;
@@ -25,7 +26,15 @@ public class PlayerController : MonoBehaviour
         {
             Jump();
         }
-        Flip();
+
+        if (facingRight && horizontalInput < 0)
+        {
+            Flip();
+        }
+        else if (!facingRight && horizontalInput > 0)
+        {
+            Flip();
+        }
     }
 
     private void FixedUpdate()
@@ -47,7 +56,10 @@ public class PlayerController : MonoBehaviour
 
     private void Flip()
     {
-        playerSprite.flipX = horizontalInput < 0.0f;
+        facingRight = !facingRight;
+        Vector2 scaler = transform.localScale;
+        scaler.x *= -1;
+        transform.localScale = scaler;
     }
 
     
