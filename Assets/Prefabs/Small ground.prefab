@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3703076122357087562}
   - component: {fileID: 5686920268479609549}
   - component: {fileID: 6003325465954392021}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Small ground
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -123,9 +123,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4275651475916000359, guid: 3bd37216cd14b4d4e9a0d2c5c1219414, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 9208970025377884408, guid: 3bd37216cd14b4d4e9a0d2c5c1219414, type: 3}
       propertyPath: m_Name
       value: Middle tile
+      objectReference: {fileID: 0}
+    - target: {fileID: 9208970025377884408, guid: 3bd37216cd14b4d4e9a0d2c5c1219414, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3bd37216cd14b4d4e9a0d2c5c1219414, type: 3}
@@ -188,6 +196,14 @@ PrefabInstance:
     - target: {fileID: 5017823997506203205, guid: 0a263501d7577cd4f8b34baef31d7c28, type: 3}
       propertyPath: m_Name
       value: Tile
+      objectReference: {fileID: 0}
+    - target: {fileID: 5017823997506203205, guid: 0a263501d7577cd4f8b34baef31d7c28, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9181014795150407294, guid: 0a263501d7577cd4f8b34baef31d7c28, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0a263501d7577cd4f8b34baef31d7c28, type: 3}

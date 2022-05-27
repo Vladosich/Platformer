@@ -5,23 +5,26 @@ public class PlayerController : MonoBehaviour
     private float horizontalInput;
     private readonly float speed = 5f;
     private readonly float jumpForce = 5f;
+    private readonly float groundCheckRadius = 0.05f;
 
     private bool isGrounded;
     private bool facingRight = true;
 
+    [SerializeField] private Transform groundCheck;
+    [SerializeField] private LayerMask whatIsGround;
     private Rigidbody2D playerRigidbody;
-    private SpriteRenderer playerSprite;
 
     public bool IsGrounded { get { return isGrounded; } }
 
     private void Start()
     {
         playerRigidbody = GetComponent<Rigidbody2D>();
-        playerSprite = GetComponentInChildren<SpriteRenderer>();
     }
 
     private void Update()
     {
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, whatIsGround);
+
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
             Jump();
@@ -61,11 +64,4 @@ public class PlayerController : MonoBehaviour
         scaler.x *= -1;
         transform.localScale = scaler;
     }
-
-    
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        isGrounded = collision.gameObject.CompareTag("Ground");
-    }
-
 }
