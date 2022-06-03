@@ -10,9 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 7316379846951145299}
   - component: {fileID: 4740605007428988230}
+  - component: {fileID: 1009598222743314303}
   m_Layer: 6
   m_Name: Invisible ground
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -58,6 +59,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.96699256}
   m_EdgeRadius: 0
+--- !u!114 &1009598222743314303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2222866252218199274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca50b6e7b03997a4a86c963f0e9e2e71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2599233476933285073
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class InvisibleGround : MonoBehaviour
+public class InvisibleBlock : MonoBehaviour
 {
     private void OnCollisionEnter2D(Collision2D collision)
     {
